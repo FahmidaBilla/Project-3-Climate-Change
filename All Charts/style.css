@@ -1,0 +1,206 @@
+body {
+  background-image: linear-gradient(-45deg, #40B3A2, #E8A87C, #C38D9D, #7DC2AD, #E27D5F);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  font-family: Jost, sans-serif;
+  text-align: center;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.header {
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+}
+
+.header > a {
+  text-decoration: none;
+}
+
+.title {
+  font-size: 72px;
+  margin: 50px auto 0;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  max-width: 90%;
+  text-align: center;
+}
+
+.js-plotly-plot > div.plot-container > div.svg-container {
+  margin: 50px auto;
+}
+
+@media screen and (max-width: 768px) {
+  #SeaLevelLineChart,
+  #TemperatureLineChart,
+  #PrecipitationLineChart,
+  #CO2EmissionLineChart,
+  #CO2ChoroplethPlot,
+  #PrecipitationChoroplethPlot,
+  #TemperatureChoroplethPlot {
+    max-width: 100%;
+  }
+}
+
+.chartdiv {
+  width: 100%;
+  height: 500px;
+  background-color: #fff;
+  margin-bottom: 50px;
+}
+
+/* Update for small screens */
+.tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tablinks {
+  margin-bottom: 10px;
+}
+
+.chart {
+  border-radius: 10px;
+  padding: 20px;
+  color: #fff;
+}
+
+/* Add new styles for tabs */
+.tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 0 0 10px 10px;
+  flex-direction: row;
+}
+
+.tab button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 18px;
+  margin: 0 10px;
+  color: #fff;
+}
+
+.tab button:hover {
+  background-color: #40B3A2;
+}
+
+.tab button.active {
+  background-color: #719eff;
+}
+
+.footer {
+  color: #fff;
+  font-size: 18px;
+  padding: 20px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 10px 10px 10px 10px;
+  flex-direction: column;
+}
+
+.created-by {
+  margin-right: 10px;
+}
+
+.author-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.author-list li {
+  margin-right: 10px;
+}
+
+/* Style the About Us tab */
+#aboutUs {
+  display: none;
+  padding: 20px;
+}
+
+
+/* Style the About Us tab content */
+/* Style the About Us tab content */
+#aboutUs h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#aboutUs p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+
+}
+
+#aboutUs ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#aboutUs li {
+  margin-bottom: 30px;
+}
+
+#aboutUs a {
+  display: block;
+}
+
+#aboutUs img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+#aboutUs li {
+  display: inline-block;
+  margin-right: 20px;
+  text-align: center;
+}
+#aboutUs li img {
+  max-width: 200px;
+  max-height: 200px;
+
+}
+#aboutUs li a {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.element {
+  margin-bottom: 10px; /* add margin to create space between individual elements */
+  border: 1px solid #ccc; /* add a border to create visual separation */
+  padding: 10px; /* add padding to the border to create more space */
+}
+
+p {
+  margin-bottom: 20px; /* increase the margin bottom to add space between paragraphs */
+}
+
+.section {
+  padding: 30px 0; /* add padding to the top and bottom of the section to create more space */
+}

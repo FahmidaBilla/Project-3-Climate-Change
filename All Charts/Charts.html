@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Climate Change Visualization - Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <header class="header">
+      <a href="Charts.html"><h1 class="title">Climate Change Dashboard</h1></a>
+    </header>
+    
+    <div class="tab">
+      <button class="tablinks" onclick="openChart(event, 'tempData')">Temperature Data</button>
+      <button class="tablinks" onclick="openChart(event, 'precipData')">Precipitation Data</button>
+      <button class="tablinks" onclick="openChart(event, 'co2Data')">CO2 Data</button>
+      <button class="tablinks" onclick="openChart(event, 'seaLevelData')">Sea Level Data</button>
+      <button class="tablinks" onclick="openChart(event, 'aboutUs')">About Us</button>
+
+    </div>
+    
+    <div id="tempData" class="chart">
+      <h3>Temperature Data</h3>
+      <p>The Temperature view consists of a Line Graph, a Choropleth Map and a Box Plot which visualizes the
+      rate of change in temperature over the time span of 1992-2022. The Line Chart displays that there has
+      been a rise in temperature over the years. The Choropleth map shows the changes in temperature over
+      the years. The Choropleth Map can be zoomed in and out and it shows the data for each coutry. The Box
+      plot shows the distribution of data over the past 3 decades and that also indicates that the temparature
+      has changed over the years.</p>
+      <div id="TemperaturePlot"></div>
+      <div id="TemperatureChoroplethPlot"></div>
+      <div id="TemperatureBox"></div>
+    </div>
+    
+    <div id="precipData" class="chart">
+      <h3>Precipitation Data</h3>
+      <p>The Precipitation view consists of a Line Graph, a Choropleth Map and a Box Plot which visualizes
+      the rate of change in precipitation over the time span of 1992-2022. The Line Chart displays that there
+      has been a fall in precipitation over the years. The Choropleth map shows the changes in precipitation over
+      the years and it shows the data for each coutry when hovered over. The Box plot shows the distribution of data over
+      the past 3 decades and that also indicates that the precipitation changed over the years.</p>
+      <div id="PrecipitationPlot"></div>
+      <div id="PrecipitationChoroplethPlot"></div>
+      <div id="PrecipitationBox"></div>   
+   
+    </div>
+    
+    <div id="co2Data" class="chart">
+      <h3>CO2 Data</h3>
+      <p>The CO2 Emission view consists of a Race Bar Chart, a Line Graph, a Choropleth Map and a Box Plot which visualizes
+      the rate of change in temperature over the time span of 1991-2021. The interactive Race Bar Chart displays the changes
+      over the years for first 7 countries and their correspondent data. The Line Chart displays that there has been a rise in CO2
+      emission over the years.
+      The Choropleth map shows the changes in CO2 emission over the years. The Choropleth Map has interactive zooom feature
+      and it
+      shows the data for each coutry when hovered over. The Box plot shows the distribution of data over the past 3 decades
+      and that
+      also indicates that the CO2 emission has changed over the years.</p>
+      <div id="co2-bar-race" class="chartdiv"></div>
+      <div id="CO2EmissionPlot"></div>
+      <div id="CO2ChoroplethPlot"></div>
+      <div id="CO2Box"></div>
+    </div>
+    
+      
+      
+    <div id="aboutUs" class="chart">
+      <h3>About Us</h3>
+      <p>Meet our team:</p>
+      <ul>
+        <li>
+          <a href="https://www.linkedin.com/in/pratik-purohit-342866201/">
+            <img src="team-member-1.jpg" alt="team member 1">
+          </a>
+          <p>Role: Data Analyst</p>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/team-member-2">
+            <img src="team-member-2.jpg" alt="team member 2">
+          </a>
+          <p>Role: Data Analyst</p>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/team-member-3">
+            <img src="team-member-3.jpg" alt="team member 3">
+          </a>
+          <p>Role: Data Analyst</p>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/team-member-4">
+            <img src="team-member-4.jpg" alt="team member 4">
+          </a>
+          <p>Role: Data Analyst</p>
+        </li>
+      </ul>
+    </div>
+    
+    
+  
+    
+      
+    </div>
+    
+    <div id="seaLevelData" class="chart">
+      <h3>Sea Level Data</h3>
+      <p>The Sea Level view consists of a Line Graph which visualizes the rate of change in sea level over the time span of
+      1992-2022.
+      The Line Chart displays that there has been a rise in sea level over the years. Due to data limitations, only line chart
+      has been
+      used for data visualization.</p>
+      <div id="SeaLevelPlot"></div>
+    </div> 
+    <div class="data-section">
+    </div>
+    
+    <footer class="footer">
+      <p class="created-by">Created by:</p>
+      <p class="authors">Fahmida Billa, John James, Pratik Purohit, Victor Dontsov, Zahra Alyari-Tabrizi</p>
+    </footer>
+
+
+        <!-- Scripts  -->
+
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="CO2DataChoropleth.js"></script>
+    <script src="CO2Data-Transformed.js"></script>
+    <script src="precipitationDataChoropleth.js"></script>
+    <script src="temperatureDataChoropleth.js"></script>
+    <script src="seaLevelData.js"></script>
+    <script src="TemperatureData.js"></script>
+    <script src="PrecipitationData.js"></script>
+    <script src="CO2EmissionData.js"></script>
+    <script src="SeaLevelLineChart.js"></script>
+    <script src="TemperatureLineChart.js"></script>
+    <script src="PrecipitationLineChart.js"></script>
+    <script src="CO2EmissionLineChart.js"></script>
+    <script src="choroplethCO2.js"></script>
+    <script src="precipitationChoropleth.js"></script>
+    <script src="temperatureChoropleth.js"></script>
+    <script src="box_temperature.js"></script>
+    <script src="box_precipitation.js"></script>
+    <script src="box_co2.js"></script>
+    <script src="eventlisteners.js" ></script>
+    <script src="am5-chart-race.js" ></script>
+
+
+    <!--
+      <script src="box_co2.js"></script>
+    -->
+  </body>
+</html>
